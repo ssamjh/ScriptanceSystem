@@ -1,0 +1,13 @@
+#!/bin/bash
+case "$1" in
+  screen)
+    screen -q -D -R -S HB-1 sh /home/mc/mineswine/dynamic/startHB-1.sh;
+    ;;
+  folder)
+    echo Type: cd /home/mc/mineswine/dynamic/HB-1
+    ;;
+  *)
+    echo "Usage: $0 {screen|folder}" >&2
+    exit 1
+    ;;
+esac
