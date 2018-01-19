@@ -1,7 +1,7 @@
 #!/bin/bash
 case "$1" in
   screen)
-    screen -q -D -R -S HB-1 sh /home/mc/mineswine/dynamic/startHB-1.sh;
+    screen -q -D -R -S HB-1 sh /home/where the static folder will go/startHB-1.sh;
     ;;
   folder)
     echo Type: cd /home/mc/mineswine/dynamic/HB-1
