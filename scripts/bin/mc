@@ -6,6 +6,9 @@ case "$1" in
   CR-1)
     screen -q -d -R -S CR-1 sh /path/to/scripts/startCR-1.sh
     ;;
+  PX-1)
+    screen -q -d -R -S PX-1 sh /path/to/scripts/startPX-1.sh
+    ;;
 #  HB-2)
 #    screen -q -d -R -S HB-2 sh /path/to/scripts/startHB-2.sh
 #    ;;

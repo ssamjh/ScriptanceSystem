@@ -48,7 +48,7 @@ DIRTEMPLATES="$DIRBASE/templates"
 DIRSPIGOT="$DIRBASE/templates/spigot"
 #
 #This just displays the server information to console for two seconds.
-/bin/echo -e "\e[93mMINE\e[95mSWINE  \e[91mInstance System\e[0m"
+/bin/echo -e "\e[91mInstance System\e[0m"
 /bin/echo -e "Server Settings"
 /bin/echo -e "Type: $TYPE"
 /bin/echo -e "RAM: $RAM"
