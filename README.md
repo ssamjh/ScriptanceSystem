@@ -5,4 +5,10 @@ How to setup.
 
 
 
-1. Go to scripts/bin and copy all the files in that folder to /usr/bin and make any new ones you may need.
+1. Run this command to setup the mc command. 
+sudo ln -s /path/to/scriptance/scripts/bin/mc /bin/bash/mc
+
+2. Read through the foldes for the info text on how to use them.
+
+
+Required: screen
