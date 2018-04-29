@@ -1,3 +1,0 @@
-All static servers go here.
-
-I will add support for static servers soon!

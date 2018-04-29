@@ -9,16 +9,16 @@ clear
 VER="1.12.2"
 #
 #How much ram should we give the server.
-RAM="512M"
+RAM="2048M"
 #
 #How many slots should the server have.
-SLOTS="50"
+SLOTS="200"
 #
 #The type of the server.
-TYPE="HB"
+TYPE="CR"
 #
 #The type ID, this must be a different number for each type.
-TYPEID="01"
+TYPEID="06"
 #
 ##The ID of the server.
 ID="1"
@@ -37,8 +37,8 @@ PORT="8$TYPEID$ID"
 #Where is the instance system located?
 DIRBASE="/path/to/scriptance"
 #
-#Where is the dynamic folder located, this is where dynamic servers will be run in?
-DIRDYNAMIC="$DIRBASE/dynamic"
+#Where is the static server folder located, this is where static servers will be run in?
+DIRSTATIC="$DIRBASE/servers"
 #
 #Where should we fetch the templates from?
 DIRTEMPLATES="$DIRBASE/templates"
@@ -48,7 +48,7 @@ DIRTEMPLATES="$DIRBASE/templates"
 DIRSPIGOT="$DIRBASE/templates/spigot"
 #
 #This just displays the server information to console for two seconds.
-/bin/echo -e "\e[91mInstance System\e[0m"
+/bin/echo -e "\e[93mMINE\e[95mSWINE  \e[91mInstance System\e[0m"
 /bin/echo -e "Server Settings"
 /bin/echo -e "Type: $TYPE"
 /bin/echo -e "RAM: $RAM"
@@ -56,30 +56,22 @@ DIRSPIGOT="$DIRBASE/templates/spigot"
 /bin/echo -e "Slots: $SLOTS"
 /bin/echo -e "IP and Port: $IP:$PORT"
 /bin/echo -e "Server Name: $SERVERNAME"
-/bin/echo -e "Location: $DIRDYNAMIC/$TYPE-$ID"
+/bin/echo -e "Location: $DIRSTATIC/$TYPE-$ID"
 /bin/echo -e ""
 /bin/echo -e "Starting the server in 5 seconds from NOW! Does something above look wrong? Press Ctrl-C to interrupt!\e[0m"
 sleep 5
 #
 # SETUP
 #
-#Lets make sure the directory is clean!
-rm -rf "$DIRDYNAMIC/$TYPE-$ID"
-#
-#And now let's create a new directory.
-mkdir "$DIRDYNAMIC/$TYPE-$ID"
-#
 #Let's move to the server direcotry.
-cd "$DIRDYNAMIC/$TYPE-$ID"
+cd "$DIRSTATIC/$TYPE-$ID"
 #
 #Time to get Spigot!
-cp "$DIRSPIGOT/spigot-$VER.jar" "$DIRDYNAMIC/$TYPE-$ID/"
+cp "$DIRSPIGOT/spigot-$VER.jar" "$DIRSTATIC/$TYPE-$ID/"
 #
 #Now copy the global folder to this server.
-cp -r "$DIRTEMPLATES/global/." "$DIRDYNAMIC/$TYPE-$ID/"
+cp -r "$DIRTEMPLATES/global/." "$DIRSTATIC/$TYPE-$ID/"
 #
-#And the template...
-cp -r "$DIRTEMPLATES/$TYPE/." "$DIRDYNAMIC/$TYPE-$ID/"
 #
 # SPIGOT
 #

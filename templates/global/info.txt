@@ -1,0 +1,1 @@
+Anything in this folder goes into every server on boot. For example if you make a plugins folder here and place plugins inside it, they will be copied to any dynamic or static server on launch.

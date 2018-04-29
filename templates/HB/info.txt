@@ -1,0 +1,1 @@
+This works the same as global but only for certian dynamic server types. Anything here will be copied to the HB server type on boot.

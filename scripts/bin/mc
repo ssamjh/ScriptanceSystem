@@ -1,0 +1,16 @@
+#!/bin/bash
+case "$1" in
+  HB-1)
+    screen -q -d -R -S HB-1 sh /path/to/scripts/startHB-1.sh
+    ;;
+  CR-1)
+    screen -q -d -R -S CR-1 sh /path/to/scripts/startCR-1.sh
+    ;;
+#  HB-2)
+#    screen -q -d -R -S HB-2 sh /path/to/scripts/startHB-2.sh
+#    ;;
+  *)
+    echo "Usage: mc {name-of-server}" >&2
+    exit 1
+    ;;
+esac

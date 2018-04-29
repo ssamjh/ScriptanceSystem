@@ -21,7 +21,7 @@ TYPE="HB"
 TYPEID="01"
 #
 ##The ID of the server.
-ID="1"
+ID="2"
 #
 #The name of the server.
 SERVERNAME="$TYPE-$ID"
